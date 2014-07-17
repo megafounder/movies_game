@@ -1,18 +1,16 @@
 require '../lib/party'
 
-#Application tests
+#Application tests (using doubles)
 
-describe "test set" do
-  it "must be truthy" do
+describe "game shows..." do
+  it "...poster image if there is poster image" do
     expect(true).to be_truthy
   end
 
-  it "must make one equal one" do
-    expect(1).to eq(1)
-  end
+
 end
 
-#Integration tests
+#Integration tests (using api)
 
 describe "test set" do
   it "" do

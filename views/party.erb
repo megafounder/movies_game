@@ -12,6 +12,10 @@
     figcaption{
       text-align: center;
     }
+
+    .gametitle{
+      text-align:  center;
+    }
   </style>
 
 </head>
@@ -28,9 +32,10 @@
 
 <div class="movieholder">
 
-  <h3>hola</h3>
+  
 
   <% if @movies != nil %>
+  <h3 class='gametitle'>Please, enjoy this game carefully.</h3>
     <% @movies.each do |movie| %>
     <figure class="movie" width="300" height="500">
      <img src="<%= movie.poster %>" width="300" height="400" />
