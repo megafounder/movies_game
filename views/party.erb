@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to the movie party</title>
+
+  <style>
+
+    .movie{
+      display: inline-block;
+    }
+    
+    figcaption{
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>Welcome to the movie party</h1>
+
+<form action="/api/movies" method="post">
+  <input type="text" name='keyword' placeholder="Search imbd">
+  <!-- <input type="size" placeholder="Game size (optional)"> -->
+  <!-- <button>New Game</button> -->
+  <input type="submit" value='New game'>
+</form>
+
+<div class="movieholder">
+
+  <h3>hola</h3>
+
+  <% if @movies != nil %>
+    <% @movies.each do |movie| %>
+    <figure class="movie" width="300" height="500">
+     <img src="<%= movie.poster %>" width="300" height="400" />
+     <figcaption>
+        <%= movie.title %>
+     </figcaption>
+    </figure>
+   <% end %>
+  <% end %>
+
+</body>
+</html>
+
